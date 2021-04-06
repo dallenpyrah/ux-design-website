@@ -85,12 +85,26 @@
       </div>
     </div>
     <div class="row justify-content-center mt-5">
-      <div class="col-4">
+      <div class="col-9  text-left">
         <h5> As a member you can take as many UX courses as you want free of charge </h5>
       </div>
+      <div class="col-9 ml-4 mt-4">
+        <div class="row">
+          <button class="btn btn-dark text-light rounded-button" @click="bookticketsRoute">
+            Book Tickets
+          </button>
+          <h6 class=" text-dark mt-2 ml-3 button-transform" @click="ourServicesRoute">
+            Our Services
+          </h6>
+        </div>
+      </div>
       <div class="col-5">
+      </div>
+    </div>
+    <div class="row justify-content-end mt-5">
+      <div class="col-8">
         <div class="row justify-content-center">
-          <div class="col-5 card bg-light border-rounded shadow-lg">
+          <div class="col-4 card bg-light border-rounded shadow-lg position-card">
             <div class="row">
               <div class="col-9">
                 <h5 class="m-2">
@@ -103,29 +117,34 @@
             </div>
             <div class="row justify-content-center">
               <div class="col-12">
-                <h6 class="ml-2 text-danger">
+                <h6 class="ml-2 pb-2 text-danger">
                   12:45 - 1:00
                 </h6>
               </div>
-            </div>
-            <div class="row">
+              <div class="col-11 pb-3">
+                <button class="btn btn-dark mr-1 rounded-button">
+                  Team
+                </button>
+                <button class="btn btn-outline-secondary ml-1 rounded-button">
+                  Meeting
+                </button>
+              </div>
+              <div class="col-12 pb-2">
+                <div class="row">
+                  <div class="col-6">
+                    <i class="fa fa-user-circle-o fa-2x m-1" aria-hidden="true"></i>
+                    <i class="fa fa-user-circle-o fa-2x m-1" aria-hidden="true"></i>
+                    <i class="fa fa-user-circle-o fa-2x m-1" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-6 text-right">
+                    <i class="fa fa-pencil-square-o m-1 p-1 text-secondary fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-arrow-circle-o-up m-1 p-1 text-danger fa-2x" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row justify-content-center mt-5">
-      <div class="col-4">
-        <div class="row">
-          <button class="btn btn-dark text-light rounded-button" @click="bookticketsRoute">
-            Book Tickets
-          </button>
-          <h6 class=" text-dark mt-2 ml-3 button-transform" @click="ourServicesRoute">
-            Our Services
-          </h6>
-        </div>
-      </div>
-      <div class="col-5">
       </div>
     </div>
   </div>
@@ -197,15 +216,16 @@ a:hover {
 .border-rounded{
   border-radius: .5rem;
 }
-.background-image{
-  background-image: url("https://cdn.dribbble.com/users/1088422/screenshots/15320729/media/a76c816f2cb7e6ad4dd0f11fb6983cbd.png?compress=1&resize=400x300");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 .margin-from-top{
   margin-top: 15rem;
 }
 .button-transform:hover{
   cursor: pointer;
+}
+@media (min-width: 1200px) {
+  .position-card{
+    position: absolute;
+    bottom: 0vh;
+  }
 }
 </style>
