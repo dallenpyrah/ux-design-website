@@ -6,19 +6,19 @@
       </div>
       <div class="col-6 text-center mt-4">
         <nav class="nav justify-content-center nav-stacked">
-          <h6 class="nav-link text-dark active" href="#">
+          <h6 class="nav-link text-dark hoverable active" href="#" @click="conferenceRoute">
             Conference
           </h6>
           <h6 class="nav-link text-dark active" href="#">
             -
           </h6>
-          <h6 class="nav-link text-dark" href="#">
+          <h6 class="nav-link text-dark hoverable" href="#" @click="bookticketsRoute">
             Tickets
           </h6>
           <h6 class="nav-link text-dark active" href="#">
             -
           </h6>
-          <h6 class="nav-link text-dark" href="#">
+          <h6 class="nav-link text-dark hoverable" href="#" @click="contactRoute">
             Contact
           </h6>
         </nav>
@@ -79,7 +79,7 @@
     </div>
     <div class="row justify-content-center mt-5">
       <div class="col-3">
-        <h1> Celebrating 15 years of UX in the USA </h1>
+        <h1> Celebrating 15 years of UX design in the USA </h1>
       </div>
       <div class="col-6">
       </div>
@@ -91,6 +91,20 @@
       <div class="col-5">
       </div>
     </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-4">
+        <div class="row">
+          <button class="btn btn-dark text-light rounded-button" @click="bookticketsRoute">
+            Book Tickets
+          </button>
+          <h6 class=" text-dark mt-2 ml-3 button-transform" @click="ourServicesRoute">
+            Our Services
+          </h6>
+        </div>
+      </div>
+      <div class="col-5">
+      </div>
+    </div>
   </div>
 </template>
 
@@ -98,9 +112,11 @@
 import { AuthService } from '../services/AuthService'
 import { AppState } from '../AppState'
 import { computed, reactive } from 'vue'
+import { useRouter } from 'vue-router'
 export default {
   name: 'Home',
   setup() {
+    const router = useRouter()
     const state = reactive({
       dropOpen: false
     })
@@ -112,6 +128,18 @@ export default {
       },
       async logout() {
         await AuthService.logout({ returnTo: window.location.origin })
+      },
+      async bookticketsRoute() {
+        router.push({ name: 'BookTickets' })
+      },
+      async ourServicesRoute() {
+        router.push({ name: 'OurServicesPage' })
+      },
+      async contactRoute() {
+        router.push({ name: 'Contact' })
+      },
+      async conferenceRoute() {
+        router.push({ name: 'Conference' })
       }
     }
   }
@@ -150,5 +178,8 @@ a:hover {
 }
 .margin-from-top{
   margin-top: 15rem;
+}
+.button-transform:hover{
+  cursor: pointer;
 }
 </style>
