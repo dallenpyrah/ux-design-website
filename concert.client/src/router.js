@@ -17,6 +17,26 @@ const routes = [
     component: loadPage('AboutPage')
   },
   {
+    path: '/booktickets',
+    name: 'BookTickets',
+    component: loadPage('BookTicketsPage')
+  },
+  {
+    path: '/conference',
+    name: 'Conference',
+    component: loadPage('ConferencePage')
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: loadPage('ContactPage')
+  },
+  {
+    path: '/ourservices',
+    name: 'OurServicesPage',
+    component: loadPage('OurServicesPage')
+  },
+  {
     path: '/account',
     name: 'Account',
     component: loadPage('AccountPage'),
