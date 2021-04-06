@@ -89,6 +89,29 @@
         <h5> As a member you can take as many UX courses as you want free of charge </h5>
       </div>
       <div class="col-5">
+        <div class="row justify-content-center">
+          <div class="col-5 card bg-light border-rounded shadow-lg">
+            <div class="row">
+              <div class="col-9">
+                <h5 class="m-2">
+                  Award Ceremony
+                </h5>
+              </div>
+              <div class="col-3 text-right">
+                <h6><i class="fa fa-toggle-on text-secondary fa-2x m-2" aria-hidden="true"></i></h6>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-12">
+                <h6 class="ml-2 text-danger">
+                  12:45 - 1:00
+                </h6>
+              </div>
+            </div>
+            <div class="row">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row justify-content-center mt-5">
@@ -170,6 +193,9 @@ a:hover {
 }
 .rounded-button{
   border-radius: 3rem;
+}
+.border-rounded{
+  border-radius: .5rem;
 }
 .background-image{
   background-image: url("https://cdn.dribbble.com/users/1088422/screenshots/15320729/media/a76c816f2cb7e6ad4dd0f11fb6983cbd.png?compress=1&resize=400x300");
